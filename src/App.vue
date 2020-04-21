@@ -2,32 +2,29 @@
 <template>
   <div id="app">
     <NavBar />
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue';
-import Vue from 'vue';
-import VueGoogleCharts from 'vue-google-charts';
+import NavBar from "./components/NavBar.vue";
+import Vue from "vue";
+import VueGoogleCharts from "vue-google-charts";
 
-Vue.use(VueGoogleCharts)
-
+Vue.use(VueGoogleCharts);
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     NavBar
   }
-}
+};
 </script>
 
 
 
 <style>
-
 body {
   background-color: black;
 }
-
 </style>
