@@ -16,9 +16,10 @@ export default {
   data() {
     return {
       items: [
-        { id: 1, text: "Timeline", router: "/timeline" },
-        { id: 2, text: "Photos", router: "/photos" },
-        { id: 3, text: "Map", router: "/map" }
+        { id: 1, text: "CV", router: "/cv" },
+        { id: 2, text: "Timeline", router: "/timeline" },
+        { id: 3, text: "Photos", router: "/photos" },
+        { id: 4, text: "Map", router: "/map" }
       ]
     };
   }

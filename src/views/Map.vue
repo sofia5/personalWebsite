@@ -116,6 +116,11 @@ export default {
   height: 92vh;
   width: 100vw;
 }
+
+body {
+  overflow: hidden;
+}
+
 .legend {
   position: absolute;
   border: 2px solid lightgray;

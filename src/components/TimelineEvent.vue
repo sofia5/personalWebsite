@@ -272,7 +272,7 @@ export default {
   padding-left: 10px;
 }
 
-@media screen and (max-width: 800px) {
+@media all and (max-width: 800px) {
   .row {
     margin-top: 50px;
     margin-bottom: 50px;
