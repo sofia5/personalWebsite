@@ -16,9 +16,6 @@ export default {
 };
 </script>
 
-
-
-
 <style scoped>
 .timeline {
   position: relative;

@@ -2,8 +2,8 @@
   <nav class="navbar navbar-expand-lg navbar-dark">
     <router-link class="navbar-brand" to="/">Sofia Johansson</router-link>
     <div class="navbar-nav">
-      <div v-for="item in items" v-bind:item="item" v-bind:key="item.id">
-        <router-link class="nav-item nav-link" v-bind:to="item.router">{{ item.text }}</router-link>
+      <div v-for="item in items" :item="item" :key="item.id">
+        <router-link class="nav-item nav-link" :to="item.router">{{ item.text }}</router-link>
       </div>
     </div>
   </nav>
@@ -18,8 +18,7 @@ export default {
       items: [
         { id: 1, text: "CV", router: "/cv" },
         { id: 2, text: "Timeline", router: "/timeline" },
-        { id: 3, text: "Photos", router: "/photos" },
-        { id: 4, text: "Map", router: "/map" }
+        { id: 3, text: "Map", router: "/map" }
       ]
     };
   }

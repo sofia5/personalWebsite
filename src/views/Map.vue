@@ -27,25 +27,6 @@
   </div>
 </template>
 
-/*
-//JSON
-{
-    "countries": [{
-            "id": 1,
-            "country": "Sweden",
-            "livedIn": 1,
-            "visited": 1
-        },
-        {
-            "id": 2,
-            "country": "USA",
-            "livedIn": 1,
-            "visited": 1
-        }
-    ]
-}
- */
-
 <script>
 import { GChart } from "vue-google-charts";
 export default {
@@ -55,26 +36,45 @@ export default {
   },
   data() {
     return {
-      // Array will be automatically processed with visualization.arrayToDataTable function
       chartData: [
         ["Countries", "Lived", "Visited", { role: "tooltip" }],
-        ["Sweden", 1, 1, ""],
-        ["Argentina", 1, 1, ""],
+        ["Sweden", 1, 1, "My home - filled with friends and family"],
+        [
+          "Argentina",
+          1,
+          1,
+          "Lived in for 5,5 months and enjoyed BBQs on rooftops, regaetton and Spanish studies"
+        ],
         ["Norway", 0, 1, ""],
         ["Denmark", 0, 1, ""],
         ["Poland", 0, 1, ""],
         ["Germany", 0, 1, ""],
-        ["United States", 1, 1, ""],
+        [
+          "United States",
+          1,
+          1,
+          "As a 19-year-old I packed my bags and went to the US for a year. Lots of fun."
+        ],
         ["Brazil", 0, 1, ""],
         ["France", 0, 1, ""],
-        ["Italy", 1, 1, ""],
+        [
+          "Italy",
+          1,
+          1,
+          "Beautiful landscapes and delicious food had me caught for 3,5 months."
+        ],
         ["Finland", 0, 1, ""],
         ["Latvia", 0, 1, ""],
         ["Estonia", 0, 1, ""],
         ["Lithuania", 0, 1, ""],
         ["Switzerland", 0, 1, ""],
         ["Austria", 0, 1, ""],
-        ["Luxembourg", 0, 1, ""],
+        [
+          "Luxembourg",
+          0,
+          1,
+          "Stayed for about a month for work, and developed a web app for Open Banking."
+        ],
         ["Croatia", 0, 1, ""],
         ["Ireland", 0, 1, ""],
         ["United Kingdom", 0, 1, ""],
@@ -88,7 +88,12 @@ export default {
         ["India", 0, 1, ""],
         ["China", 0, 1, ""],
         ["Turkey", 0, 1, ""],
-        ["Nicaragua", 0, 1, ""],
+        [
+          "Nicaragua",
+          0,
+          1,
+          "Spent 3 weeks in this paradise, visiting lagoons and vulcanos"
+        ],
         ["Uruguay", 0, 1, ""],
         ["Netherlands", 0, 1, ""],
         ["Belgium", 0, 1, ""],
@@ -103,7 +108,10 @@ export default {
           colors: ["lightgreen", "green"]
         },
         backgroundColor: "black",
-        legend: "none"
+        legend: "none",
+        tooltip: {
+          textStyle: { fontName: "Candara" }
+        }
       }
     };
   }
@@ -115,6 +123,7 @@ export default {
 .map {
   height: 92vh;
   width: 100vw;
+  font-family: "Titillium", sans-serif;
 }
 
 body {

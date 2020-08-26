@@ -10,11 +10,7 @@
           >{{ getYear(event.date) + ' ' + getMonth(event.date) }}</h5>
           <h5 v-else class="eventDate">{{ getYear(event.date) + ' ' + getMonth(event.date) }}</h5>
           <p class="inline">{{ event.text }}</p>
-          <i
-            class="inline"
-            v-if="event.icon != undefined"
-            v-bind:class="event.icon + ' paddingLeft'"
-          ></i>
+          <i class="inline" v-if="event.icon != undefined" :class="event.icon + ' paddingLeft'"></i>
         </div>
       </div>
 
@@ -43,11 +39,7 @@
           >{{ getYear(event.date) + ' ' + getMonth(event.date) }}</h5>
           <h5 v-else class="eventDate">{{ getYear(event.date) + ' ' + getMonth(event.date) }}</h5>
           <p class="inline">{{event.text }}</p>
-          <i
-            class="inline"
-            v-if="event.icon != undefined"
-            v-bind:class="event.icon + ' paddingLeft'"
-          ></i>
+          <i class="inline" v-if="event.icon != undefined" :class="event.icon + ' paddingLeft'"></i>
         </div>
       </div>
     </div>
