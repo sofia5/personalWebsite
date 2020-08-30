@@ -1,6 +1,6 @@
 <template>
   <div>
-    <svg width="400" height="30">
+    <svg width="410" height="30">
       <path
         :class="[skillLevel >= 1 ? 'active' : 'notActive']"
         d="M 0 0 M 10 0 A 2 1 0 0 0 10 10 M 10 10 L 80 10 L 80 0 L 10 0"
@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
 .active {
-  fill: rgba(0, 0, 255);
+  fill: rgb(54, 115, 206);
 }
 
 .notActive {

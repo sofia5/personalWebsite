@@ -28,7 +28,6 @@ export default {
 
 <style scoped>
 .navbar {
-  background: black;
   height: 8vh;
 }
 </style>

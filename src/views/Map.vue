@@ -107,7 +107,7 @@ export default {
         colorAxis: {
           colors: ["lightgreen", "green"]
         },
-        backgroundColor: "black",
+        backgroundColor: "rgb(16, 16, 16)",
         legend: "none",
         tooltip: {
           textStyle: { fontName: "Candara" }

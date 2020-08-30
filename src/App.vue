@@ -25,7 +25,7 @@ export default {
 
 <style>
 body {
-  background-color: black;
+  background-color: rgb(16, 16, 16);
 }
 
 ::-webkit-scrollbar {

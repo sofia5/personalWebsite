@@ -22,11 +22,19 @@
             cx="30"
             cy="30"
             r="15"
-            stroke="black"
+            stroke="rgb(16, 16, 16)"
             stroke-width="5"
             fill="#00cccc"
           />
-          <circle v-else cx="30" cy="30" r="10" stroke="black" stroke-width="5" fill="white" />
+          <circle
+            v-else
+            cx="30"
+            cy="30"
+            r="10"
+            stroke="rgb(16, 16, 16)"
+            stroke-width="5"
+            fill="white"
+          />
         </svg>
       </div>
 

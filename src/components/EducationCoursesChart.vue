@@ -54,7 +54,7 @@ export default {
         },
         stroke: {
           width: 1,
-          colors: ["black"]
+          colors: ["rgb(16, 16, 16)"]
         },
         grid: {
           padding: {

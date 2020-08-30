@@ -97,7 +97,7 @@ export default {
   left: 15px;
   color: gray;
   font-style: italic;
-  background-color: black;
+  background-color: rgb(16, 16, 16);
   display: inline-block;
   padding-left: 10px;
   padding-right: 10px;

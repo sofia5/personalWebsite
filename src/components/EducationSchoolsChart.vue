@@ -29,7 +29,7 @@ export default {
         dataLabels: {
           style: {
             fontSize: "0.9vmax",
-            colors: ["black"]
+            colors: ["rgb(16, 16, 16)"]
           },
           dropShadow: {
             enabled: false
@@ -46,7 +46,7 @@ export default {
         },
         stroke: {
           show: true,
-          colors: "black"
+          colors: "rgb(16, 16, 16)"
         },
         plotOptions: {
           pie: {
