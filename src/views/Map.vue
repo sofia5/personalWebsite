@@ -12,17 +12,17 @@
       <h4 class="legendTitle">Country Tracker</h4>
       <div>
         <svg width="10px" height="10px">
-          <rect width="10px" height="10px" style="fill:green" />
+          <rect width="10px" height="10px" style="fill: green" />
         </svg>
         <p class="legendText inline">Lived in more than 3 months</p>
       </div>
       <div>
         <svg width="10px" height="10px">
-          <rect width="10px" height="10px" style="fill:lightgreen" />
+          <rect width="10px" height="10px" style="fill: lightgreen" />
         </svg>
         <p class="legendText inline">Visited</p>
       </div>
-      <h6 class="legendTotal">Total: {{chartData.length - 1}} countries</h6>
+      <h6 class="legendTotal">Total: {{ chartData.length - 1 }} countries</h6>
     </div>
   </div>
 </template>
@@ -32,89 +32,95 @@ import { GChart } from "vue-google-charts";
 export default {
   name: "Map",
   components: {
-    GChart
+    GChart,
   },
   data() {
     return {
       chartData: [
         ["Countries", "Lived", "Visited", { role: "tooltip" }],
-        ["Sweden", 1, 1, "My home - filled with friends and family"],
         [
           "Argentina",
           1,
           1,
-          "Lived in for 5,5 months and enjoyed BBQs on rooftops, regaetton and Spanish studies"
+          "Lived in for 5,5 months and enjoyed BBQs on rooftops, regaetton and Spanish studies",
         ],
-        ["Norway", 0, 1, ""],
-        ["Denmark", 0, 1, ""],
-        ["Poland", 0, 1, ""],
-        ["Germany", 0, 1, ""],
-        [
-          "United States",
-          1,
-          1,
-          "As a 19-year-old I packed my bags and went to the US for a year. Lots of fun."
-        ],
+        ["Austria", 0, 1, ""],
+        ["Belgium", 0, 1, ""],
         ["Brazil", 0, 1, ""],
+        ["China", 0, 1, ""],
+        ["Croatia", 0, 1, ""],
+        ["Denmark", 0, 1, ""],
+        ["Estonia", 0, 1, ""],
+        ["Finland", 0, 1, ""],
         ["France", 0, 1, ""],
+        ["Germany", 0, 1, ""],
+        ["Iceland", 0, 1, ""],
+        [
+          "India",
+          0,
+          1,
+          "Arranged visits at various companies along with a project group at KTH",
+        ],
+        ["Indonesia", 0, 1, ""],
+        ["Ireland", 0, 1, ""],
         [
           "Italy",
           1,
           1,
-          "Beautiful landscapes and delicious food had me caught for 3,5 months."
+          "Beautiful landscapes and delicious food had me caught for 3,5 months. I also earned a double degree from UNITN, my italian school.",
         ],
-        ["Finland", 0, 1, ""],
         ["Latvia", 0, 1, ""],
-        ["Estonia", 0, 1, ""],
+        ["Liechtenstein", 0, 1, ""],
         ["Lithuania", 0, 1, ""],
-        ["Switzerland", 0, 1, ""],
-        ["Austria", 0, 1, ""],
         [
           "Luxembourg",
           0,
           1,
-          "Stayed for about a month for work, and developed a web app for Open Banking."
+          "Stayed for about a month for work, and developed a web app for Open Banking.",
         ],
-        ["Croatia", 0, 1, ""],
-        ["Ireland", 0, 1, ""],
-        ["United Kingdom", 0, 1, ""],
-        ["Scotland", 0, 1, ""],
-        ["Spain", 0, 1, ""],
+        ["Poland", 0, 1, ""],
         ["Portugal", 0, 1, ""],
         ["Malaysia", 0, 1, ""],
-        ["Thailand", 0, 1, ""],
-        ["Indonesia", 0, 1, ""],
-        ["Singapore", 0, 1, ""],
-        ["India", 0, 1, ""],
-        ["China", 0, 1, ""],
-        ["Turkey", 0, 1, ""],
+        ["Monaco", 0, 1, ""],
+        ["Netherlands", 0, 1, ""],
         [
           "Nicaragua",
           0,
           1,
-          "Spent 3 weeks in this paradise, visiting lagoons and vulcanos"
+          "Spent 3 weeks in this paradise, visiting lagoons and vulcanos",
+        ],
+        ["Norway", 0, 1, ""],
+        ["Scotland", 0, 1, ""],
+        ["Spain", 0, 1, ""],
+        ["Singapore", 0, 1, ""],
+        ["Sweden", 1, 1, "My home - filled with friends and family"],
+        ["Switzerland", 0, 1, ""],
+        ["Thailand", 0, 1, ""],
+        ["Turkey", 0, 1, ""],
+        ["United Kingdom", 0, 1, ""],
+        [
+          "United States",
+          1,
+          1,
+          "As a 19-year-old I packed my bags and went to the US for a year. Lots of fun.",
         ],
         ["Uruguay", 0, 1, ""],
-        ["Netherlands", 0, 1, ""],
-        ["Belgium", 0, 1, ""],
-        ["Liechtenstein", 0, 1, ""],
-        ["Monaco", 0, 1, ""]
       ],
       chartOptions: {
         chart: {
-          title: "Countries"
+          title: "Countries",
         },
         colorAxis: {
-          colors: ["lightgreen", "green"]
+          colors: ["lightgreen", "green"],
         },
         backgroundColor: "rgb(16, 16, 16)",
         legend: "none",
         tooltip: {
-          textStyle: { fontName: "Candara" }
-        }
-      }
+          textStyle: { fontName: "Candara" },
+        },
+      },
     };
-  }
+  },
 };
 </script>
 
