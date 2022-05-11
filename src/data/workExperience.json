@@ -1,0 +1,46 @@
+[{
+        "id": 1,
+        "company": "SEB",
+        "title": "Technology Strategist & Cloud Communicator",
+        "startDate": "",
+        "endDate": "",
+        "description": "",
+        "formOfEmployment": "Full-time"
+    },
+    {
+        "id": 2,
+        "company": "SEB",
+        "title": "Enterprise Architecture",
+        "startDate": "",
+        "endDate": "",
+        "description": "",
+        "formOfEmployment": "Full-time"
+    },
+    {
+        "id": 3,
+        "company": "SEB",
+        "title": "International Trainee",
+        "startDate": "",
+        "endDate": "",
+        "description": "",
+        "formOfEmployment": "Full-time"
+    },
+    {
+        "id": 4,
+        "company": "SAAB",
+        "title": "Master Thesis / Research",
+        "startDate": "",
+        "endDate": "",
+        "description": "",
+        "formOfEmployment": "Part-time"
+    },
+    {
+        "id": 5,
+        "company": "SAAB",
+        "title": "BI Developer",
+        "startDate": "",
+        "endDate": "",
+        "description": "",
+        "formOfEmployment": "Part-time"
+    }
+]

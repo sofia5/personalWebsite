@@ -1,55 +1,19 @@
 <template>
-  <div></div>
+  <div>
+    <div v-for="job in workExperience" :key="job.id">
+      <p>{{ job.title }}</p>
+    </div>
+  </div>
 </template>
 
 <script>
+import workExperience from "../data/workExperience.json";
 export default {
   data() {
     return {
-      jobs: [
-        {
-          company: "SEB",
-          jobTitle: "Technology Strategist & Cloud Communicator",
-          startDate: "",
-          endDate: "",
-          description: "",
-          formOfEmployment: "Full-time"
-        },
-        {
-          company: "SEB",
-          jobTitle: "Enterprise Architecture",
-          startDate: "",
-          endDate: "",
-          description: "",
-          formOfEmployment: "Full-time"
-        },
-        {
-          company: "SEB",
-          jobTitle: "International Trainee",
-          startDate: "",
-          endDate: "",
-          description: "",
-          formOfEmployment: "Full-time"
-        },
-        {
-          company: "SAAB",
-          jobTitle: "",
-          startDate: "",
-          endDate: "",
-          description: "",
-          formOfEmployment: "Part-time"
-        },
-        {
-          company: "SAAB",
-          jobTitle: "",
-          startDate: "",
-          endDate: "",
-          description: "",
-          formOfEmployment: "Part-time"
-        }
-      ]
+      workExperience: workExperience,
     };
-  }
+  },
 };
 </script>
 

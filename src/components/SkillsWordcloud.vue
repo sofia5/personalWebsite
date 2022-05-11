@@ -20,21 +20,21 @@ import wordcloud from "vue-wordcloud";
 export default {
   name: "Wordcloud",
   components: {
-    wordcloud
+    wordcloud,
   },
   methods: {
     wordClickHandler(name, value, vm) {
       console.log("wordClickHandler", name, value, vm);
-    }
+    },
   },
   props: ["skills"],
   data() {
     return {
       wordcloudColors: ["#1f77b4", "#629fc9", "#94bedb", "#c9e0ef"],
       wordcloudFontSize: [15, 50],
-      wordcloudMargin: { top: 15, right: 15, bottom: 0, left: 0 }
+      wordcloudMargin: { top: 15, right: 15, bottom: 0, left: 0 },
     };
-  }
+  },
 };
 </script>
 
