@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div v-for="(area, i) in getAreas" :key="i">
-      <EducationCoursesChart :school="school" :area="area" />
+    <div v-for="(discipline, i) in getDisciplines" :key="i">
+      <EducationCoursesChart :school="school" :discipline="discipline" />
     </div>
   </div>
 </template>
@@ -12,24 +12,20 @@ import EducationCoursesChart from "../components/EducationCoursesChart.vue";
 export default {
   props: ["school"],
   components: {
-    EducationCoursesChart
+    EducationCoursesChart,
   },
   data() {
     return {
-      area: []
+      discipline: [],
     };
   },
   computed: {
-    getAreas() {
-      var areas = [];
-      this.school.courses.forEach(course => {
-        if (!areas.includes(course.area)) {
-          areas.push(course.area);
-        }
-      });
-      return areas;
-    }
-  }
+    getDisciplines() {
+      return [
+        ...new Set(this.school.courses.map((course) => course.discipline)),
+      ];
+    },
+  },
 };
 </script>
 

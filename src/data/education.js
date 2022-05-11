@@ -34,7 +34,7 @@ const education = [{
                 grade: "D",
                 date: "2013-10-07",
                 courseLevel: "Bachelor",
-                area: "Math"
+                discipline: "Math"
             },
             {
                 name: "Digital Design",
@@ -43,7 +43,7 @@ const education = [{
                 grade: "C",
                 date: "2013-10-28",
                 courseLevel: "Bachelor",
-                area: "Computer Science"
+                discipline: "Computer Science"
             },
             {
                 name: "Japanese Studies and the Basic of Japanese",
@@ -52,7 +52,7 @@ const education = [{
                 grade: "B",
                 date: "2013-12-14",
                 courseLevel: "Bachelor",
-                area: "Languages"
+                discipline: "Languages"
             },
             {
                 name: "Calculus in One Variable",
@@ -61,7 +61,7 @@ const education = [{
                 grade: "D",
                 date: "2014-01-11",
                 courseLevel: "Bachelor",
-                area: "Math"
+                discipline: "Math"
             },
             {
                 name: "Algebra and Geometry",
@@ -70,7 +70,7 @@ const education = [{
                 grade: "E",
                 date: "2014-05-20",
                 courseLevel: "Bachelor",
-                area: "Math"
+                discipline: "Math"
             },
             {
                 name: "Discrete Mathematics",
@@ -79,7 +79,7 @@ const education = [{
                 grade: "C",
                 date: "2014-05-27",
                 courseLevel: "Bachelor",
-                area: "Math"
+                discipline: "Math"
             },
             {
                 name: "Embedded Electronics",
@@ -88,7 +88,7 @@ const education = [{
                 grade: "C",
                 date: "2014-06-05",
                 courseLevel: "Bachelor",
-                area: "Physics"
+                discipline: "Physics"
             },
             {
                 name: "Algorithms and Data Structures",
@@ -97,7 +97,7 @@ const education = [{
                 grade: "B",
                 date: "2014-10-31",
                 courseLevel: "Bachelor",
-                area: "Programming"
+                discipline: "Programming"
             },
             {
                 name: "Electromagnetism and Waves",
@@ -106,7 +106,7 @@ const education = [{
                 grade: "D",
                 date: "2014-10-31",
                 courseLevel: "Bachelor",
-                area: "Physics"
+                discipline: "Physics"
             },
             {
                 name: "Information and Retrieval and Source Criticism",
@@ -115,7 +115,7 @@ const education = [{
                 grade: "P",
                 date: "2014-12-10",
                 courseLevel: "Bachelor",
-                area: "Engineering / Academic skills"
+                discipline: "Engineering / Academic skills"
             },
             {
                 name: "Industrial Management, Basic Course",
@@ -124,7 +124,7 @@ const education = [{
                 grade: "B",
                 date: "2015-01-15",
                 courseLevel: "Bachelor",
-                area: "Industrial Engineering & Leadership"
+                discipline: "Industrial Engineering & Leadership"
             },
             {
                 name: "Computer Hardware Engineering",
@@ -133,7 +133,7 @@ const education = [{
                 grade: "D",
                 date: "2015-03-16",
                 courseLevel: "Bachelor",
-                area: "Computer Science"
+                discipline: "Computer Science"
             },
             {
                 name: "Calculus in Several Variable II",
@@ -142,7 +142,7 @@ const education = [{
                 grade: "E",
                 date: "2015-03-16",
                 courseLevel: "Bachelor",
-                area: "Math"
+                discipline: "Math"
             },
             {
                 name: "Programming II",
@@ -151,7 +151,7 @@ const education = [{
                 grade: "E",
                 date: "2015-03-20",
                 courseLevel: "Bachelor",
-                area: "Programming"
+                discipline: "Programming"
             },
             {
                 name: "Networks and Communication",
@@ -160,7 +160,7 @@ const education = [{
                 grade: "B",
                 date: "2015-03-20",
                 courseLevel: "Bachelor",
-                area: "Computer Science"
+                discipline: "Computer Science"
             },
             {
                 name: "Team Leadership and Human Resource Management",
@@ -169,7 +169,7 @@ const education = [{
                 grade: "B",
                 date: "2015-04-20",
                 courseLevel: "Bachelor",
-                area: "Industrial Engineering & Leadership"
+                discipline: "Industrial Engineering & Leadership"
             },
             {
                 name: "Project IT",
@@ -178,7 +178,7 @@ const education = [{
                 grade: "P",
                 date: "2015-06-09",
                 courseLevel: "Bachelor",
-                area: "Project / Thesis"
+                discipline: "Project / Thesis"
             },
             {
                 name: "Modern Software Development",
@@ -187,7 +187,7 @@ const education = [{
                 grade: "P",
                 date: "2015-06-09",
                 courseLevel: "Bachelor",
-                area: "Computer Science"
+                discipline: "Computer Science"
             },
             {
                 name: "Programming I",
@@ -196,7 +196,7 @@ const education = [{
                 grade: "A",
                 date: "2016-01-13",
                 courseLevel: "Bachelor",
-                area: "Programming"
+                discipline: "Programming"
             },
             {
                 name: "Sustainable Development, ICT and Innovation",
@@ -205,7 +205,7 @@ const education = [{
                 grade: "A",
                 date: "2016-04-15",
                 courseLevel: "Bachelor",
-                area: "Engineering / Academic skills"
+                discipline: "Engineering / Academic skills"
             },
             {
                 name: "Project Management: Leadership and Control",
@@ -214,7 +214,7 @@ const education = [{
                 grade: "B",
                 date: "2016-06-23",
                 courseLevel: "Bachelor",
-                area: "Industrial Engineering & Leadership"
+                discipline: "Industrial Engineering & Leadership"
             },
             {
                 name: "Degree Project in Information and Communication Technology, First Cycle",
@@ -223,7 +223,7 @@ const education = [{
                 grade: "B",
                 date: "2016-07-04",
                 courseLevel: "Bachelor",
-                area: "Project / Thesis"
+                discipline: "Project / Thesis"
             },
             {
                 name: "Project Work II",
@@ -232,7 +232,7 @@ const education = [{
                 grade: "P",
                 date: "2016-12-14",
                 courseLevel: "Bachelor",
-                area: "Project / Thesis"
+                discipline: "Project / Thesis"
             },
             {
                 name: "Probability Theory and Statistics",
@@ -241,7 +241,7 @@ const education = [{
                 grade: "E",
                 date: "2017-05-30",
                 courseLevel: "Bachelor",
-                area: "Math"
+                discipline: "Math"
             },
             {
                 name: "Human-Computer Interaction, Research Seminars",
@@ -250,7 +250,7 @@ const education = [{
                 grade: "B",
                 date: "2018-06-27",
                 courseLevel: "Master",
-                area: "Human-Computer Science"
+                discipline: "Human-Computer Science"
             },
             {
                 name: "Interaction Programming and the Dynamic Web",
@@ -259,7 +259,7 @@ const education = [{
                 grade: "A",
                 date: "2017-04-19",
                 courseLevel: "Master",
-                area: "Programming"
+                discipline: "Programming"
             },
             {
                 name: "Multimodal Interaction and Interfaces",
@@ -268,7 +268,7 @@ const education = [{
                 grade: "B",
                 date: "2017-01-20",
                 courseLevel: "Master",
-                area: "Programming"
+                discipline: "Programming"
             },
             {
                 name: "Human-computer Interaction: Principles and Design",
@@ -277,7 +277,7 @@ const education = [{
                 grade: "C",
                 date: "2016-12-21",
                 courseLevel: "Master",
-                area: "Human-Computer Science"
+                discipline: "Human-Computer Science"
             },
             {
                 name: "Methodology of Interaction Design",
@@ -286,7 +286,7 @@ const education = [{
                 grade: "B",
                 date: "2017-01-16",
                 courseLevel: "Master",
-                area: "Human-Computer Science"
+                discipline: "Human-Computer Science"
             },
             {
                 name: "Research Methodology and Scientific Writing",
@@ -295,7 +295,7 @@ const education = [{
                 grade: "A",
                 date: "2017-02-06",
                 courseLevel: "Master",
-                area: "Engineering / Academic skills"
+                discipline: "Engineering / Academic skills"
             },
             {
                 name: "Technology-based Entrepreneurship",
@@ -304,7 +304,7 @@ const education = [{
                 grade: "A",
                 date: "2017-06-27",
                 courseLevel: "Master",
-                area: "Innovation & Entrepreneurship"
+                discipline: "Innovation & Entrepreneurship"
             },
             {
                 name: "Entrepreneurship for Engineers",
@@ -313,7 +313,7 @@ const education = [{
                 grade: "A",
                 date: "2017-01-0",
                 courseLevel: "Master",
-                area: "Innovation & Entrepreneurship"
+                discipline: "Innovation & Entrepreneurship"
             },
             {
                 name: "Business Development Lab of Entrepreneurship Engineers",
@@ -322,7 +322,7 @@ const education = [{
                 grade: "A",
                 date: "2017-06-02",
                 courseLevel: "Master",
-                area: "Innovation & Entrepreneurship"
+                discipline: "Innovation & Entrepreneurship"
             },
             {
                 name: "Summer Course- Entrepreneurship for Engineers",
@@ -331,7 +331,7 @@ const education = [{
                 grade: "B",
                 date: "2017-07-02",
                 courseLevel: "Master",
-                area: "Innovation & Entrepreneurship"
+                discipline: "Innovation & Entrepreneurship"
             }
         ]
     },
@@ -355,7 +355,7 @@ const education = [{
                 grade: "E",
                 date: "2018-11-02",
                 courseLevel: "Bachelor",
-                area: "Economics"
+                discipline: "Economics"
             },
             {
                 name: "Marketing I",
@@ -364,7 +364,7 @@ const education = [{
                 grade: "C",
                 date: "2018-12-05",
                 courseLevel: "Bachelor",
-                area: "Marketing"
+                discipline: "Marketing"
             }
         ]
     },
@@ -387,7 +387,7 @@ const education = [{
                 grade: 7.75,
                 date: "2015-07-25",
                 courseLevel: "Bachelor",
-                area: "Engineering / Acedemic skills"
+                discipline: "Engineering / Acedemic skills"
             },
             {
                 name: "Operative systems",
@@ -396,7 +396,7 @@ const education = [{
                 grade: 5.25,
                 date: "2015-07-25",
                 courseLevel: "Bachelor",
-                area: "Computer Science"
+                discipline: "Computer Science"
             },
             {
                 name: "Human-Computer Interactions (HCI)",
@@ -405,7 +405,7 @@ const education = [{
                 grade: 6.75,
                 date: "2015-07-25",
                 courseLevel: "Bachelor",
-                area: "Human-Computer Science"
+                discipline: "Human-Computer Science"
             },
             {
                 name: "Commercialization",
@@ -414,7 +414,7 @@ const education = [{
                 grade: 8.75,
                 date: "2015-07-25",
                 courseLevel: "Bachelor",
-                area: "Marketing"
+                discipline: "Marketing"
             },
             {
                 name: "Regular Spanish B1",
@@ -423,7 +423,7 @@ const education = [{
                 grade: 8.0,
                 date: "2015-07-25",
                 courseLevel: "Bachelor",
-                area: "Languages"
+                discipline: "Languages"
             }
         ]
     },
@@ -452,7 +452,7 @@ const education = [{
                 grade: "A-",
                 date: "",
                 courseLevel: "Bachelor",
-                area: "Religion"
+                discipline: "Religion"
             },
             {
                 name: "Calculus I",
@@ -461,7 +461,7 @@ const education = [{
                 grade: "A-",
                 date: "",
                 courseLevel: "Bachelor",
-                area: "Math"
+                discipline: "Math"
             },
             {
                 name: "Knowledge, Reality, Self",
@@ -470,7 +470,7 @@ const education = [{
                 grade: "A-",
                 date: "",
                 courseLevel: "Bachelor",
-                area: "Philosophy"
+                discipline: "Philosophy"
             },
             {
                 name: "International Relations",
@@ -479,7 +479,7 @@ const education = [{
                 grade: "A-",
                 date: "",
                 courseLevel: "Bachelor",
-                area: "Politics"
+                discipline: "Politics"
             },
             {
                 name: "Intermediate Spanish I",
@@ -488,7 +488,7 @@ const education = [{
                 grade: "A",
                 date: "",
                 courseLevel: "Bachelor",
-                area: "Languages"
+                discipline: "Languages"
             },
             {
                 name: "Moderns",
@@ -497,7 +497,7 @@ const education = [{
                 grade: "A",
                 date: "",
                 courseLevel: "Bachelor",
-                area: "Religion"
+                discipline: "Religion"
             },
             {
                 name: "Survey of Communication Studies",
@@ -506,7 +506,7 @@ const education = [{
                 grade: "A-",
                 date: "",
                 courseLevel: "Bachelor",
-                area: "Communication"
+                discipline: "Communication"
             },
             {
                 name: "Computing with Images",
@@ -515,7 +515,7 @@ const education = [{
                 grade: "A-",
                 date: "",
                 courseLevel: "Bachelor",
-                area: "Photo Editing"
+                discipline: "Photo Editing"
             },
             {
                 name: "Intro to Tactical Leadership",
@@ -524,7 +524,7 @@ const education = [{
                 grade: "A-",
                 date: "",
                 courseLevel: "Bachelor",
-                area: "Military Science"
+                discipline: "Military Science"
             },
             {
                 name: "General Psychology",
@@ -533,7 +533,7 @@ const education = [{
                 grade: "B+",
                 date: "",
                 courseLevel: "Bachelor",
-                area: "Psychology"
+                discipline: "Psychology"
             },
             {
                 name: "Intermediate Spanish II",
@@ -542,7 +542,7 @@ const education = [{
                 grade: "A-",
                 date: "",
                 courseLevel: "Bachelor",
-                area: "Languages"
+                discipline: "Languages"
             }
         ]
     },
@@ -568,7 +568,7 @@ const education = [{
                 grade: 31,
                 date: "2018-01-09",
                 courseLevel: "Master",
-                area: "Human-Computer Science"
+                discipline: "Human-Computer Science"
             },
             {
                 name: "E-learning",
@@ -577,7 +577,7 @@ const education = [{
                 grade: 28,
                 date: "2018-01-10",
                 courseLevel: "Master",
-                area: "Human-Computer Science"
+                discipline: "Human-Computer Science"
             },
             {
                 name: "Design Epistemology and Ethics",
@@ -586,7 +586,7 @@ const education = [{
                 grade: 30,
                 date: "2018-01-16",
                 courseLevel: "Master",
-                area: "Human-Computer Science"
+                discipline: "Human-Computer Science"
             },
             {
                 name: "Innovation and Enterpreneurship Studies in ICT",
@@ -595,7 +595,7 @@ const education = [{
                 grade: 28,
                 date: "2018-01-26",
                 courseLevel: "Master",
-                area: "Innovation & Entrepreneurship"
+                discipline: "Innovation & Entrepreneurship"
             },
             {
                 name: "Prototyping Interactive Systems",
@@ -604,7 +604,7 @@ const education = [{
                 grade: 30,
                 date: "2018-02-13",
                 courseLevel: "Master",
-                area: "Human-Computer Science"
+                discipline: "Human-Computer Science"
             },
             {
                 name: "Final thesis",
@@ -613,7 +613,7 @@ const education = [{
                 grade: 30,
                 date: "2018-07-25",
                 courseLevel: "Master",
-                area: "Project / Thesis"
+                discipline: "Project / Thesis"
             }
         ]
     }

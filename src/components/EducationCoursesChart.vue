@@ -1,7 +1,7 @@
 <template>
   <div id="barchart">
     <div class="barChartAreaWrapper">
-      <p class="barChartArea">{{area}}</p>
+      <p class="barChartArea">{{ discipline }}</p>
     </div>
     <div class="barChartDataWrapper">
       <apexchart
@@ -21,9 +21,9 @@ import VueApexCharts from "vue-apexcharts";
 export default {
   name: "EducationCoursesChart",
   components: {
-    apexchart: VueApexCharts
+    apexchart: VueApexCharts,
   },
-  props: ["area", "school"],
+  props: ["discipline", "school"],
   data() {
     return {
       categories: [],
@@ -34,7 +34,7 @@ export default {
           this.adjustColor(this.school.color, 80),
           this.adjustColor(this.school.color, 120),
           this.adjustColor(this.school.color, 200),
-          this.adjustColor(this.school.color, 280)
+          this.adjustColor(this.school.color, 280),
         ],
         chart: {
           type: "bar",
@@ -42,73 +42,73 @@ export default {
           stacked: true,
           toolbar: {
             tools: {
-              download: false
-            }
-          }
+              download: false,
+            },
+          },
         },
         plotOptions: {
           bar: {
             horizontal: true,
-            barHeight: "70%"
-          }
+            barHeight: "70%",
+          },
         },
         stroke: {
           width: 1,
-          colors: ["rgb(16, 16, 16)"]
+          colors: ["rgb(16, 16, 16)"],
         },
         grid: {
           padding: {
             top: -35,
-            bottom: -20
-          }
+            bottom: -20,
+          },
         },
         xaxis: {
           min: 0,
           max: 41,
           categories: [""],
           labels: {
-            show: false
+            show: false,
           },
           axisBorder: {
-            show: false
+            show: false,
           },
           axisTicks: {
-            show: false
+            show: false,
           },
-          position: "none"
+          position: "none",
         },
         legend: {
-          show: false
+          show: false,
         },
         tooltip: {
           theme: "light",
           x: {
-            show: false
-          }
+            show: false,
+          },
         },
         states: {
           hover: {
             filter: {
               type: "lighten",
-              value: 0.15
-            }
+              value: 0.15,
+            },
           },
           active: {
             filter: {
               type: "lighten",
-              value: 0
-            }
-          }
-        }
-      }
+              value: 0,
+            },
+          },
+        },
+      },
     };
   },
   computed: {
     getCourses() {
       var courses = [];
-      this.school.courses.forEach(course => {
+      this.school.courses.forEach((course) => {
         var dataArray = [];
-        if (course.area === this.area) {
+        if (course.discipline === this.discipline) {
           // The US both have 16 credits per semester
           if (this.school.pointScale == "US") {
             dataArray.push(Math.round(course.credits * 1.875 * 10) / 10);
@@ -121,7 +121,7 @@ export default {
         }
       });
       return courses;
-    }
+    },
   },
   methods: {
     adjustColor(color, amount) {
@@ -129,7 +129,7 @@ export default {
         "#" +
         color
           .replace(/^#/, "")
-          .replace(/../g, color =>
+          .replace(/../g, (color) =>
             (
               "0" +
               Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(
@@ -138,19 +138,15 @@ export default {
             ).substr(-2)
           )
       );
-    }
+    },
   },
   created() {
     this.getCourses;
-  }
+  },
 };
 </script>
 
 <style scoped>
-.barchart {
-  margin: 0;
-}
-
 .barChartAreaWrapper {
   display: inline-block;
   margin: 0;

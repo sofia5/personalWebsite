@@ -7,34 +7,56 @@
     <div v-for="(button, index) in filterButtons" :key="index">
       <!-- SKILLS -->
       <div
-        v-if="(button.name == 'All' || button.name == cvAreas.skills.name) && button.active == true"
+        v-if="
+          (button.name == 'All' || button.name == cvSections.skills.name) &&
+          button.active == true
+        "
       >
-        <CVButton :buttons="cvAreas.skills.parts" :right="true" />
+        <CVButton :buttons="cvSections.skills.parts" :right="true" />
         <div class="CVAreaWrapper">
-          <h5 class="CVAreaHeader">{{cvAreas.skills.name}}</h5>
-          <SkillsWordcloud v-if="cvAreas.skills.parts[0].active == true" :skills="skills" />
-          <SkillsCategories v-if="cvAreas.skills.parts[1].active == true" :skills="skills" />
+          <h5 class="CVAreaHeader">{{ cvSections.skills.name }}</h5>
+          <SkillsWordcloud
+            v-if="cvSections.skills.parts[0].active == true"
+            :skills="skills"
+          />
+          <SkillsCategories
+            v-if="cvSections.skills.parts[1].active == true"
+            :skills="skills"
+          />
         </div>
       </div>
 
       <!-- EDUCATION -->
       <div
-        v-if="(button.name == 'All' || button.name == cvAreas.education.name) && button.active == true"
+        v-if="
+          (button.name == 'All' || button.name == cvSections.education.name) &&
+          button.active == true
+        "
       >
-        <CVButton :buttons="cvAreas.education.parts" :right="true" />
+        <CVButton :buttons="cvSections.education.parts" :right="true" />
         <div class="CVAreaWrapper">
-          <h5 class="CVAreaHeader">{{cvAreas.education.name}}</h5>
-          <Education v-if="cvAreas.education.parts[0].active == true" :skills="skills" />
-          <EducationHighSchool v-if="cvAreas.education.parts[1].active == true" :skills="skills" />
+          <h5 class="CVAreaHeader">{{ cvSections.education.name }}</h5>
+          <Education
+            v-if="cvSections.education.parts[0].active == true"
+            :skills="skills"
+          />
+          <EducationHighSchool
+            v-if="cvSections.education.parts[1].active == true"
+            :skills="skills"
+          />
         </div>
       </div>
 
       <!-- WORK EXPERIENCE -->
       <div
-        v-if="(button.name == 'All' || button.name == cvAreas.workExperience.name) && button.active == true"
+        v-if="
+          (button.name == 'All' ||
+            button.name == cvSections.workExperience.name) &&
+          button.active == true
+        "
       >
         <div class="CVAreaWrapper">
-          <h5 class="CVAreaHeader">{{cvAreas.workExperience.name}}</h5>
+          <h5 class="CVAreaHeader">{{ cvSections.workExperience.name }}</h5>
           <WorkExperience />
         </div>
       </div>
@@ -50,7 +72,7 @@ import EducationHighSchool from "../components/EducationHighSchool.vue";
 import WorkExperience from "../components/WorkExperience.vue";
 import CVButton from "../components/CVButton.vue";
 import skills from "../data/skills.js";
-import cvAreas from "../data/cvAreas.js";
+import cvSections from "../data/cvSections.js";
 
 export default {
   name: "CV",
@@ -60,20 +82,20 @@ export default {
     Education,
     EducationHighSchool,
     WorkExperience,
-    CVButton
+    CVButton,
   },
   data() {
     return {
-      cvAreas,
+      cvSections,
       filterButtons: [
         { name: "All", active: true },
-        { name: cvAreas.skills.name, active: false },
-        { name: cvAreas.education.name, active: false },
-        { name: cvAreas.workExperience.name, active: false }
+        { name: cvSections.skills.name, active: false },
+        { name: cvSections.education.name, active: false },
+        { name: cvSections.workExperience.name, active: false },
       ],
-      skills
+      skills,
     };
-  }
+  },
 };
 </script>
 

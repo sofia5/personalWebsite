@@ -1,4 +1,4 @@
-const cvAreas = {
+const cvSections = {
     skills: {
         name: "Skills",
         parts: [
@@ -20,4 +20,4 @@ const cvAreas = {
 }
 
 
-export default cvAreas;
+export default cvSections;

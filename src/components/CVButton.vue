@@ -1,5 +1,5 @@
 <template>
-  <div :class="{skillsButtonWrapperRight : right}">
+  <div :class="{ skillsButtonWrapperRight: right }">
     <div
       class="btn-group btn-group-toggle"
       data-toggle="buttons"
@@ -9,10 +9,10 @@
       <label
         class="skillsButton btn btn-sm"
         @click="changeActive(index)"
-        :class="{ active: button.active == true}"
+        :class="{ active: button.active == true }"
       >
         <input type="radio" />
-        {{button.name}}
+        {{ button.name }}
       </label>
     </div>
   </div>
@@ -24,12 +24,11 @@ export default {
   props: ["buttons", "right"],
   methods: {
     changeActive(i) {
-      this.buttons.forEach(button => {
-        button.active = false;
-      });
-      this.buttons[i].active = true;
-    }
-  }
+      this.buttons.map((button, index) =>
+        index == i ? (button.active = true) : (button.active = false)
+      );
+    },
+  },
 };
 </script>
 
