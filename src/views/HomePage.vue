@@ -2,13 +2,14 @@
   <div class="home">
     <div class="container-fluid">
       <div class="profilePictureWrapper">
-        <img class="profilePicture" src="../assets/profilePic.jpg" alt />
+        <img class="profilePicture" src="../assets/img/profilePic.jpg" alt />
       </div>
       <div class="aboutMeWrapper">
         <h1 class="titleText">Hi and welcome to my site!</h1>
         <p class="aboutMeText">
-          My name is Sofia Johansson and I love being creative. On this site I will try to share some of my creativity with you, as well as tell my story.
-          Another reason for creating this site was to try out Vue.js
+          My name is Sofia Johansson and I love being creative. On this site I
+          will try to share some of my creativity with you, as well as tell my
+          story. Another reason for creating this site was to try out Vue.js
         </p>
         <p class="aboutMeText">Below you find other places that I like.</p>
         <SocialMedia />
@@ -21,10 +22,10 @@
 import SocialMedia from "../components/SocialMedia.vue";
 
 export default {
-  name: "Home",
+  name: "HomePage",
   components: {
-    SocialMedia
-  }
+    SocialMedia,
+  },
 };
 </script>
 

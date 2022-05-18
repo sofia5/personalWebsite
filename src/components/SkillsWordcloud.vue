@@ -18,7 +18,7 @@
 import wordcloud from "vue-wordcloud";
 
 export default {
-  name: "Wordcloud",
+  name: "SkillsWordCloud",
   components: {
     wordcloud,
   },

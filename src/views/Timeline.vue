@@ -9,10 +9,10 @@
 import TimelineEvent from "../components/TimelineEvent.vue";
 
 export default {
-  name: "Timeline",
+  name: "TimeLine",
   components: {
-    TimelineEvent
-  }
+    TimelineEvent,
+  },
 };
 </script>
 

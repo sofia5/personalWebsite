@@ -8,24 +8,26 @@
 
 <script>
 import NavBar from "./components/NavBar.vue";
-import Vue from "vue";
-import VueGoogleCharts from "vue-google-charts";
+// import Vue from "vue";
+// import VueGoogleCharts from "vue-google-charts";
+// import { GChart } from "vue-google-charts";
 
-Vue.use(VueGoogleCharts);
+// Vue.use(VueGoogleCharts);
 
 export default {
   name: "app",
   components: {
-    NavBar
-  }
+    NavBar,
+  },
 };
 </script>
 
 
 
-<style>
+<style lang="scss">
+@import "./assets/scss/variables.scss";
 body {
-  background-color: rgb(16, 16, 16);
+  background-color: $background-color;
 }
 
 ::-webkit-scrollbar {

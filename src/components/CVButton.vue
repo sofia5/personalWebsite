@@ -18,21 +18,37 @@
   </div>
 </template>
 
-<script scoped>
-export default {
-  name: "CVButton",
-  props: ["buttons", "right"],
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+
+@Options({
+  props: {
+    msg: String,
+  },
   methods: {
-    changeActive(i) {
-      this.buttons.map((button, index) =>
+    changeActive(i: number): void {
+      this.buttons.map((button: any, index: number) =>
         index == i ? (button.active = true) : (button.active = false)
       );
     },
   },
-};
+})
+export default class CVButton extends Vue {}
+
+// export default {
+//   name: "CVButton",
+//   props: ["buttons", "right"],
+//   methods: {
+//     changeActive(i: number): void {
+//       this.buttons.map((button, index) =>
+//         index == i ? (button.active = true) : (button.active = false)
+//       );
+//     },
+//   },
+// };
 </script>
 
-<style>
+<style scoped>
 .skillsButtonWrapperRight {
   display: flex;
   justify-content: flex-end;
@@ -40,12 +56,13 @@ export default {
 
 .skillsButton {
   border-radius: 0;
-  border: none;
-  background-color: rgb(83, 83, 83);
+  border: rgb(26 26 26) solid 1px;
+  border-bottom: rgb(16, 16, 16) solid 5px;
+  bottom: -1px;
   color: white;
 }
 
 .active {
-  background-color: gray;
+  border-bottom: #28a745 solid 2px;
 }
 </style>

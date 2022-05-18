@@ -15,7 +15,7 @@
         <CVButton :buttons="cvSections.skills.parts" :right="true" />
         <div class="CVAreaWrapper">
           <h5 class="CVAreaHeader">{{ cvSections.skills.name }}</h5>
-          <SkillsWordcloud
+          <SkillsWordCloud
             v-if="cvSections.skills.parts[0].active == true"
             :skills="skills"
           />
@@ -65,9 +65,9 @@
 </template>
 
 <script>
-import SkillsWordcloud from "../components/SkillsWordcloud.vue";
+import SkillsWordCloud from "../components/SkillsWordCloud.vue";
 import SkillsCategories from "../components/SkillsCategories.vue";
-import Education from "../components/Education.vue";
+import Education from "../components/EducationGeneral.vue";
 import EducationHighSchool from "../components/EducationHighSchool.vue";
 import WorkExperience from "../components/WorkExperience.vue";
 import CVButton from "../components/CVButton.vue";
@@ -77,7 +77,7 @@ import cvSections from "../data/cvSections.js";
 export default {
   name: "CV",
   components: {
-    SkillsWordcloud,
+    SkillsWordCloud,
     SkillsCategories,
     Education,
     EducationHighSchool,
@@ -109,7 +109,7 @@ export default {
 }
 
 .CVAreaWrapper {
-  border: gray solid 1px;
+  border: rgb(26 26 26) solid 1px;
   margin-bottom: 40px;
 }
 

@@ -86,9 +86,10 @@ export default {
   },
   methods: {
     showInfo(index) {
-      this.education.map((school, i) =>
+      let activeEducation = this.education;
+      activeEducation.map((school, i) =>
         i == index
-          ? (this.education[index].active = !this.education[index].active)
+          ? (activeEducation[index].active = !activeEducation[index].active)
           : (school.active = false)
       );
     },

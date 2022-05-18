@@ -32,7 +32,7 @@ import { GChart } from "vue-google-charts";
 import visitedCountries from "../data/visitedCountries.json";
 
 export default {
-  name: "Map",
+  name: "VisitedMap",
   components: {
     GChart,
   },

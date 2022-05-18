@@ -76,12 +76,12 @@
 </template>
 
 <script>
-import EducationSchoolsChart from "../components/EducationSchoolsChart.vue";
-import EducationCoursesCharts from "../components/EducationCoursesCharts.vue";
+import EducationSchoolsChart from "./EducationSchoolsChart.vue";
+import EducationCoursesCharts from "./EducationCoursesCharts.vue";
 import education from "../data/education.js";
 
 export default {
-  name: "Education",
+  name: "EducationGeneral",
   components: {
     EducationSchoolsChart,
     EducationCoursesCharts,
