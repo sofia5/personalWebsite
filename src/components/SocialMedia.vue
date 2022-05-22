@@ -14,10 +14,11 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "SocialMedia",
-};
+});
 </script>
 
 <style scoped>

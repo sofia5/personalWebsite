@@ -5,15 +5,16 @@
 </template>
 
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import TimelineEvent from "../components/TimelineEvent.vue";
 
-export default {
+export default defineComponent({
   name: "TimeLine",
   components: {
     TimelineEvent,
   },
-};
+});
 </script>
 
 <style scoped>

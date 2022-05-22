@@ -2,7 +2,11 @@
   <div class="home">
     <div class="container-fluid">
       <div class="profilePictureWrapper">
-        <img class="profilePicture" src="../assets/img/profilePic.jpg" alt />
+        <img
+          class="profilePicture"
+          src="../assets/img/profilePic.jpg"
+          alt="profilePic"
+        />
       </div>
       <div class="aboutMeWrapper">
         <h1 class="titleText">Hi and welcome to my site!</h1>
@@ -18,15 +22,16 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import SocialMedia from "../components/SocialMedia.vue";
 
-export default {
+export default defineComponent({
   name: "HomePage",
   components: {
     SocialMedia,
   },
-};
+});
 </script>
 
 

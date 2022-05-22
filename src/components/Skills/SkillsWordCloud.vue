@@ -14,20 +14,18 @@
   </div>
 </template>
 
-<script>
-import wordcloud from "vue-wordcloud";
 
-export default {
+<script lang="ts">
+import { defineComponent, PropType } from "vue";
+import wordcloud from "vue-wordcloud";
+import Skill from "@/types/Skill";
+
+export default defineComponent({
   name: "SkillsWordCloud",
   components: {
     wordcloud,
   },
-  methods: {
-    wordClickHandler(name, value, vm) {
-      console.log("wordClickHandler", name, value, vm);
-    },
-  },
-  props: ["skills"],
+  props: { skills: { type: Array as PropType<Skill[]>, required: true } },
   data() {
     return {
       wordcloudColors: ["#1f77b4", "#629fc9", "#94bedb", "#c9e0ef"],
@@ -35,9 +33,8 @@ export default {
       wordcloudMargin: { top: 15, right: 15, bottom: 0, left: 0 },
     };
   },
-};
+});
 </script>
-
 
 
 <style>

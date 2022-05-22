@@ -19,33 +19,23 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import ButtonWithState from "../types/ButtonWithState";
+import { defineComponent, PropType } from "vue";
 
-@Options({
+export default defineComponent({
+  name: "CVButton",
   props: {
-    msg: String,
+    buttons: { type: Array as PropType<ButtonWithState[]>, required: true },
+    right: { type: Boolean, required: true },
   },
   methods: {
     changeActive(i: number): void {
-      this.buttons.map((button: any, index: number) =>
+      this.buttons.map((button, index: number) =>
         index == i ? (button.active = true) : (button.active = false)
       );
     },
   },
-})
-export default class CVButton extends Vue {}
-
-// export default {
-//   name: "CVButton",
-//   props: ["buttons", "right"],
-//   methods: {
-//     changeActive(i: number): void {
-//       this.buttons.map((button, index) =>
-//         index == i ? (button.active = true) : (button.active = false)
-//       );
-//     },
-//   },
-// };
+});
 </script>
 
 <style scoped>

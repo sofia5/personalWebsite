@@ -15,10 +15,10 @@
         <CVButton :buttons="cvSections.skills.parts" :right="true" />
         <div class="CVAreaWrapper">
           <h5 class="CVAreaHeader">{{ cvSections.skills.name }}</h5>
-          <SkillsWordCloud
+          <!-- <SkillsWordCloud
             v-if="cvSections.skills.parts[0].active == true"
             :skills="skills"
-          />
+          /> -->
           <SkillsCategories
             v-if="cvSections.skills.parts[1].active == true"
             :skills="skills"
@@ -64,20 +64,22 @@
   </div>
 </template>
 
-<script>
-import SkillsWordCloud from "../components/SkillsWordCloud.vue";
-import SkillsCategories from "../components/SkillsCategories.vue";
-import Education from "../components/EducationGeneral.vue";
-import EducationHighSchool from "../components/EducationHighSchool.vue";
+<script lang="ts">
+import { defineComponent } from "vue";
+import SkillsWordCloud from "../components/Skills/SkillsWordCloud.vue";
+import SkillsCategories from "../components/Skills/SkillsCategories.vue";
+import Education from "../components/Education/EducationGeneral.vue";
+import EducationHighSchool from "../components/Education/EducationHighSchool.vue";
 import WorkExperience from "../components/WorkExperience.vue";
 import CVButton from "../components/CVButton.vue";
-import skills from "../data/skills.js";
-import cvSections from "../data/cvSections.js";
+import skills from "@/data/skills.json";
+import cvSections from "@/data/cvSections.js";
+import ButtonWithState from "../types/ButtonWithState";
 
-export default {
+export default defineComponent({
   name: "CV",
   components: {
-    SkillsWordCloud,
+    // SkillsWordCloud,
     SkillsCategories,
     Education,
     EducationHighSchool,
@@ -92,11 +94,11 @@ export default {
         { name: cvSections.skills.name, active: false },
         { name: cvSections.education.name, active: false },
         { name: cvSections.workExperience.name, active: false },
-      ],
+      ] as ButtonWithState[],
       skills,
     };
   },
-};
+});
 </script>
 
 <style>

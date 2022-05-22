@@ -6,11 +6,13 @@
   </div>
 </template>
 
-<script>
-import EducationCoursesChart from "../components/EducationCoursesChart.vue";
+<script lang="ts">
+import EducationCoursesChart from "./EducationCoursesChart.vue";
+import { defineComponent, PropType } from "vue";
+import Education from "@/types/Education";
 
-export default {
-  props: ["school"],
+export default defineComponent({
+  props: { school: { type: Object as PropType<Education>, required: true } },
   components: {
     EducationCoursesChart,
   },
@@ -26,7 +28,7 @@ export default {
       ];
     },
   },
-};
+});
 </script>
 
 <style scoped>

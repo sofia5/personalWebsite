@@ -9,60 +9,65 @@
       * The international credits have other scales. These have been
       approximated to fit the Swedish credit system.
     </p>
-    <div v-for="school in education" :key="school.name">
+    <div v-for="school in education" :key="school.id">
       <div class="container-fluid" v-if="school.active == true">
         <!-- Title: Name & Grade -->
         <h5 class="schoolName inline" :style="{ color: school.color }">
           {{ school.nameLong }} ({{ school.nameShort }})
         </h5>
         <p class="lightgray inline marginLeftSmall">
-          | Avg. Grade: {{ getAverageGrade[school.nameShort] }} of 5.0
+          | Avg. Grade: {{ getAverageGrade[school.id] }} of 5.0
         </p>
 
         <!-- About school -->
         <p class="aboutSchool boldGray">About {{ school.nameShort }}:</p>
         <div class="container schoolDescriptionWrapper">
           <p class="lightgray">{{ school.schoolDescription }}</p>
-
           <div class="schoolLink">
             <a :href="school.schoolLink">- {{ school.nameLong }}</a>
           </div>
         </div>
 
         <!-- Exchange from -->
-        <p class="boldGray" v-if="school.exchangeFrom">Exchange from:</p>
-        <div class="container" v-if="school.exchangeFrom">
-          <p class="inline" :style="{ color: school.color }">
-            {{ school.exchangeFrom }}
-          </p>
-          <p class="lightgray inline marginLeftSmall">
-            | {{ school.exchangeYear }}
-          </p>
-        </div>
-
-        <!-- Degrees -->
-        <p class="boldGray" v-if="school.degrees">Degrees:</p>
-        <div v-for="degree in school.degrees" :key="degree.name">
+        <template v-if="school.exchangeFrom">
+          <p class="boldGray">Exchange from:</p>
           <div class="container">
             <p class="inline" :style="{ color: school.color }">
-              {{ degree.name }}
+              {{ school.exchangeFrom }}
             </p>
             <p class="lightgray inline marginLeftSmall">
-              | {{ degree.credits }} credits
+              | {{ school.exchangeYear }}
             </p>
           </div>
-        </div>
+        </template>
+
+        <!-- Degrees -->
+        <template v-if="school.degrees">
+          <p class="boldGray">Degrees:</p>
+          <div v-for="degree in school.degrees" :key="degree.name">
+            <div class="container">
+              <p class="inline" :style="{ color: school.color }">
+                {{ degree.name }}
+              </p>
+              <p class="lightgray inline marginLeftSmall">
+                | {{ degree.credits }} credits
+              </p>
+            </div>
+          </div>
+        </template>
 
         <!-- Accomplishments -->
-        <p class="boldGray" v-if="school.accomplishments">Accomplishments:</p>
-        <div v-for="(accomplishment, i) in school.accomplishments" :key="i">
-          <div class="container">
-            <p class="marginBottomSmall" :style="{ color: school.color }">
-              {{ accomplishment.name }}
-            </p>
-            <p class="lightgray">{{ accomplishment.description }}</p>
+        <template v-if="school.accomplishments">
+          <p class="boldGray">Accomplishments:</p>
+          <div v-for="(accomplishment, i) in school.accomplishments" :key="i">
+            <div class="container">
+              <p class="marginBottomSmall" :style="{ color: school.color }">
+                {{ accomplishment.name }}
+              </p>
+              <p class="lightgray">{{ accomplishment.description }}</p>
+            </div>
           </div>
-        </div>
+        </template>
 
         <!-- Courses -->
         <p class="boldGray">Courses:</p>
@@ -75,12 +80,15 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import EducationSchoolsChart from "./EducationSchoolsChart.vue";
 import EducationCoursesCharts from "./EducationCoursesCharts.vue";
-import education from "../data/education.js";
+import education from "@/data/education.json";
+import Education from "@/types/Education";
+import Course from "@/types/Course";
 
-export default {
+export default defineComponent({
   name: "EducationGeneral",
   components: {
     EducationSchoolsChart,
@@ -88,46 +96,56 @@ export default {
   },
   data() {
     return {
-      credits: [],
-      labels: [],
-      averageGrade: [],
-      education,
+      credits: [] as number[],
+      labels: [] as string[],
+      averageGrade: {} as { [key: string]: number },
+      education: education as Education[],
     };
   },
   computed: {
     getPointsPerSchool() {
-      var array = [];
-      this.education.forEach((school, index) => {
-        var count = 0;
-        school.courses.forEach((course) => {
-          // Sweden and Italy both have 30 credits per semester
-          if (school.pointScale == "SE" || school.pointScale == "IT") {
-            count = count + course.credits;
+      let pointsPerSchool: { name: string; credits: number }[] = [];
+      this.education.forEach((school: Education, index: number) => {
+        let count = 0;
+
+        school.courses.forEach((course: Course) => {
+          switch (school.pointScale) {
+            // Sweden and Italy both have 30 credits per semester
+            case "SE":
+            case "IT":
+              count = count + course.credits;
+              break;
+
             // The US has 16 credits per semester
-          } else if (school.pointScale == "US") {
-            count = count + course.credits * 1.875;
+            case "US":
+              count = count + course.credits * 1.875;
+              break;
+
             // Argentina has 21 credits per semester
-          } else if (school.pointScale == "AR") {
-            count = count + course.credits * 1.428;
+            case "AR":
+              count = count + course.credits * 1.428;
+              break;
+            default:
+              break;
           }
         });
 
         this.credits[index] = Math.round(count);
         this.labels[index] = school.nameShort;
-        array[index] = {
+        pointsPerSchool[index] = {
           name: school.nameShort,
           credits: count,
         };
       });
 
-      return array;
+      return pointsPerSchool;
     },
     getAverageGrade() {
-      var avg = [];
+      let avg: { [key: string]: number } = {};
 
-      this.education.forEach((school) => {
-        var score = 0;
-        var possibleMaxScore = 0;
+      this.education.forEach((school: Education) => {
+        let score = 0;
+        let possibleMaxScore = 0;
 
         school.courses.forEach((course) => {
           /* Sweden */
@@ -211,7 +229,7 @@ export default {
             /* ARGENTINA */
           } else if (school.pointScale == "AR") {
             possibleMaxScore = possibleMaxScore + 10 * course.credits;
-            score = score + course.grade * course.credits;
+            score = score + this.isNumeric(course.grade) * course.credits;
 
             // Max grade AR: 10.0
             avg[school.nameShort] =
@@ -221,7 +239,7 @@ export default {
             /* ITALY */
           } else if (school.pointScale == "IT") {
             possibleMaxScore = possibleMaxScore + 30 * course.credits;
-            score = score + course.grade * course.credits;
+            score = score + this.isNumeric(course.grade) * course.credits;
 
             // Max grade 10: 30.0
             avg[school.nameShort] =
@@ -233,18 +251,24 @@ export default {
 
       return avg;
     },
-    getAverageGradeForSchool(name) {
+    getAverageGradeForSchool(name): number {
       return this.averageGrade[name];
     },
-    getActiveSchool() {
-      return this.education.filter((school) => school.active == true)[0];
+    getActiveSchool(): Education {
+      return this.education.filter(
+        (school: Education) => school.active == true
+      )[0];
     },
   },
   created() {
     this.getPointsPerSchool;
-    this.getAverage;
   },
-};
+  methods: {
+    isNumeric(stringOrNumber: string | number): number {
+      return typeof stringOrNumber === "number" ? stringOrNumber : 0;
+    },
+  },
+});
 </script>
 
 <style scoped>

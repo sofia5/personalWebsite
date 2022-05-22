@@ -27,11 +27,12 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import { GChart } from "vue-google-charts";
 import visitedCountries from "../data/visitedCountries.json";
 
-export default {
+export default defineComponent({
   name: "VisitedMap",
   components: {
     GChart,
@@ -54,7 +55,7 @@ export default {
       },
     };
   },
-};
+});
 </script>
 
 

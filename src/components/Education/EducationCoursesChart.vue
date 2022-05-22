@@ -15,15 +15,21 @@
   </div>
 </template>
 
-<script>
-import VueApexCharts from "vue-apexcharts";
+<script lang="ts">
+import VueApexCharts from "vue3-apexcharts";
+import { defineComponent, PropType } from "vue";
+import Education from "@/types/Education";
+import Course from "@/types/Course";
 
-export default {
+export default defineComponent({
   name: "EducationCoursesChart",
   components: {
     apexchart: VueApexCharts,
   },
-  props: ["discipline", "school"],
+  props: {
+    discipline: { type: String, required: true },
+    school: { type: Object as PropType<Education>, required: true },
+  },
   data() {
     return {
       categories: [],
@@ -105,9 +111,9 @@ export default {
   },
   computed: {
     getCourses() {
-      var courses = [];
-      this.school.courses.forEach((course) => {
-        var dataArray = [];
+      let courses: unknown[] = [];
+      this.school.courses.forEach((course: Course) => {
+        let dataArray: number[] = [];
         if (course.discipline === this.discipline) {
           // The US both have 16 credits per semester
           if (this.school.pointScale == "US") {
@@ -124,7 +130,7 @@ export default {
     },
   },
   methods: {
-    adjustColor(color, amount) {
+    adjustColor(color: string, amount: number) {
       return (
         "#" +
         color
@@ -143,10 +149,10 @@ export default {
   created() {
     this.getCourses;
   },
-};
+});
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .barChartAreaWrapper {
   display: inline-block;
   margin: 0;

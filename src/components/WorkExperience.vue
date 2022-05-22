@@ -6,15 +6,18 @@
   </div>
 </template>
 
-<script>
-import workExperience from "../data/workExperience.json";
-export default {
+<script lang="ts">
+import * as workExperience from "../data/workExperience.json";
+import Job from "../types/Job";
+import { defineComponent } from "vue";
+
+export default defineComponent({
   data() {
     return {
-      workExperience: workExperience,
+      workExperience: workExperience as Job[],
     };
   },
-};
+});
 </script>
 
 <style scoped>

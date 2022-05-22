@@ -1,0 +1,247 @@
+[{
+        "id": 1,
+        "skill": "Java",
+        "skillLevel": 3,
+        "category": "Programming languages"
+    },
+    {
+        "id": 2,
+        "skill": "Python",
+        "skillLevel": 3,
+        "category": "Programming languages"
+    },
+    {
+        "id": 3,
+        "skill": "Vue",
+        "skillLevel": 3,
+        "category": "Frameworks"
+    },
+    {
+        "id": 4,
+        "skill": "JavaScript",
+        "skillLevel": 4,
+        "category": "Programming languages"
+    },
+    {
+        "id": 5,
+        "skill": "German",
+        "skillLevel": 1,
+        "category": "Languages"
+    },
+    {
+        "id": 6,
+        "skill": "Spanish",
+        "skillLevel": 3,
+        "category": "Languages"
+    },
+    {
+        "id": 7,
+        "skill": "English",
+        "skillLevel": 4,
+        "category": "Languages"
+    },
+    {
+        "id": 8,
+        "skill": "Erlang",
+        "skillLevel": 1,
+        "category": "Programming languages"
+    },
+    {
+        "id": 9,
+        "skill": "ELK",
+        "skillLevel": 3,
+        "category": "Frameworks"
+    },
+    {
+        "id": 10,
+        "skill": "Continuous Delivery",
+        "skillLevel": 3,
+        "category": "Software development methods"
+    },
+    {
+        "id": 11,
+        "skill": "Agile",
+        "skillLevel": 3,
+        "category": "Software development methods"
+    },
+    {
+        "id": 12,
+        "skill": "DevOps",
+        "skillLevel": 2,
+        "category": "Software development methods"
+    },
+    {
+        "id": 13,
+        "skill": "Angular",
+        "skillLevel": 3,
+        "category": "Frameworks"
+    },
+    {
+        "id": 14,
+        "skill": "Powerpoint",
+        "skillLevel": 5,
+        "category": "Applications"
+    },
+    {
+        "id": 15,
+        "skill": "Excel",
+        "skillLevel": 5,
+        "category": "Applications"
+    },
+    {
+        "id": 16,
+        "skill": "R",
+        "skillLevel": 1,
+        "category": "Programming languages"
+    },
+    {
+        "id": 17,
+        "skill": "Node.js",
+        "skillLevel": 1,
+        "category": "Frameworks"
+    },
+    {
+        "id": 18,
+        "skill": "Mongo DB",
+        "skillLevel": 1,
+        "category": "Frameworks"
+    },
+    {
+        "id": 19,
+        "skill": "CSS",
+        "skillLevel": 3,
+        "category": "Programming languages"
+    },
+    {
+        "id": 20,
+        "skill": "HTML",
+        "skillLevel": 4,
+        "category": "Programming languages"
+    },
+    {
+        "id": 21,
+        "skill": "Blogging",
+        "skillLevel": 3,
+        "category": "Other"
+    },
+    {
+        "id": 22,
+        "skill": "Photoshop",
+        "skillLevel": 4,
+        "category": "Design"
+    },
+    {
+        "id": 23,
+        "skill": "InDesign",
+        "skillLevel": 4,
+        "category": "Design"
+    },
+    {
+        "id": 24,
+        "skill": "Design",
+        "skillLevel": 4,
+        "category": "Design"
+    },
+    {
+        "id": 25,
+        "skill": "Tableau",
+        "skillLevel": 4,
+        "category": "Applications"
+    },
+    {
+        "id": 26,
+        "skill": "Unity",
+        "skillLevel": 1,
+        "category": "Frameworks"
+    },
+    {
+        "id": 27,
+        "skill": "Math",
+        "skillLevel": 4,
+        "category": "Academic skills"
+    },
+    {
+        "id": 28,
+        "skill": "Engineering",
+        "skillLevel": 4,
+        "category": "Academic skills"
+    },
+    {
+        "id": 29,
+        "skill": "Photography",
+        "skillLevel": 3,
+        "category": "Other"
+    },
+    {
+        "id": 30,
+        "skill": "Bootstrap",
+        "skillLevel": 5,
+        "category": "Frameworks"
+    },
+    {
+        "id": 31,
+        "skill": "Axure RD",
+        "skillLevel": 4,
+        "category": "Design"
+    },
+    {
+        "id": 32,
+        "skill": "Assembly",
+        "skillLevel": 2,
+        "category": "Programming languages"
+    },
+    {
+        "id": 33,
+        "skill": "C",
+        "skillLevel": 2,
+        "category": "Programming languages"
+    },
+    {
+        "id": 34,
+        "skill": "Economics",
+        "skillLevel": 3,
+        "category": "Business & Economics"
+    },
+    {
+        "id": 35,
+        "skill": "Research",
+        "skillLevel": 4,
+        "category": "Academic skills"
+    },
+    {
+        "id": 36,
+        "skill": "Human-Computer Interactions",
+        "skillLevel": 3,
+        "category": "Design"
+    },
+    {
+        "id": 37,
+        "skill": "D3",
+        "skillLevel": 1,
+        "category": "Frameworks"
+    },
+    {
+        "id": 38,
+        "skill": "APIs",
+        "skillLevel": 3,
+        "category": "Software development methods"
+    },
+    {
+        "id": 39,
+        "skill": "Microservices",
+        "skillLevel": 2,
+        "category": "Software development methods"
+    },
+    {
+        "id": 40,
+        "skill": "IT Architecture",
+        "skillLevel": 2,
+        "category": "Software development methods"
+    },
+    {
+        "id": 41,
+        "skill": "Cloud",
+        "skillLevel": 3,
+        "category": "Software development methods"
+    }
+]

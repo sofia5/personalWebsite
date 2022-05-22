@@ -11,10 +11,12 @@
   </div>
 </template>
     
-<script>
-import VueApexCharts from "vue-apexcharts";
+<script lang="ts">
+import VueApexCharts from "vue3-apexcharts";
+import { defineComponent } from "vue";
+import Education from "@/types/Education";
 
-export default {
+export default defineComponent({
   name: "EducationSchoolsChart",
   props: ["education", "credits", "labels"],
   components: {
@@ -44,7 +46,11 @@ export default {
           type: "donut",
           foreColor: "rgb(163, 163, 163)",
           events: {
-            dataPointSelection: (event, chartContext, config) => {
+            dataPointSelection: (
+              _event: any,
+              _chartContext: any,
+              config: { dataPointIndex: any }
+            ) => {
               this.showInfo(config.dataPointIndex);
             },
           },
@@ -61,7 +67,7 @@ export default {
                 show: true,
                 value: {
                   show: true,
-                  formatter: function (val) {
+                  formatter: function (val: string) {
                     return val + " HP";
                   },
                 },
@@ -69,7 +75,9 @@ export default {
                   fontSize: "30px",
                   show: true,
                   color: "white",
-                  formatter: function (w) {
+                  formatter: function (w: {
+                    globals: { seriesTotals: any[] };
+                  }) {
                     return (
                       w.globals.seriesTotals.reduce((a, b) => {
                         return a + b;
@@ -85,16 +93,16 @@ export default {
     };
   },
   methods: {
-    showInfo(index) {
+    showInfo(index: number) {
       let activeEducation = this.education;
-      activeEducation.map((school, i) =>
+      activeEducation.map((school: Education, i: number) =>
         i == index
           ? (activeEducation[index].active = !activeEducation[index].active)
           : (school.active = false)
       );
     },
   },
-};
+});
 </script>
     
 <style scoped>

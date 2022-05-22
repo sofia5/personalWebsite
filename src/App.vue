@@ -6,20 +6,16 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import NavBar from "./components/NavBar.vue";
-// import Vue from "vue";
-// import VueGoogleCharts from "vue-google-charts";
-// import { GChart } from "vue-google-charts";
 
-// Vue.use(VueGoogleCharts);
-
-export default {
+export default defineComponent({
   name: "app",
   components: {
     NavBar,
   },
-};
+});
 </script>
 
 
