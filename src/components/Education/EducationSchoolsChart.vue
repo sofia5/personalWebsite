@@ -7,6 +7,7 @@
       type="donut"
       :options="chartOptions"
       :series="credits"
+      @dataPointSelection="dataPointSelection"
     ></apexchart>
   </div>
 </template>
@@ -45,15 +46,6 @@ export default defineComponent({
         chart: {
           type: "donut",
           foreColor: "rgb(163, 163, 163)",
-          events: {
-            dataPointSelection: (
-              _event: any,
-              _chartContext: any,
-              config: { dataPointIndex: any }
-            ) => {
-              this.showInfo(config.dataPointIndex);
-            },
-          },
         },
         stroke: {
           show: true,
@@ -75,9 +67,7 @@ export default defineComponent({
                   fontSize: "30px",
                   show: true,
                   color: "white",
-                  formatter: function (w: {
-                    globals: { seriesTotals: any[] };
-                  }) {
+                  formatter: function (w: { globals: { seriesTotals } }) {
                     return (
                       w.globals.seriesTotals.reduce((a, b) => {
                         return a + b;
@@ -93,6 +83,9 @@ export default defineComponent({
     };
   },
   methods: {
+    dataPointSelection(_event, _chartContext, config) {
+      this.showInfo(config.dataPointIndex);
+    },
     showInfo(index: number) {
       let activeEducation = this.education;
       activeEducation.map((school: Education, i: number) =>

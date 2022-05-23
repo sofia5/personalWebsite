@@ -1,4 +1,3 @@
-
 <template>
   <div class="container CVArea">
     <!-- FILTER -->
@@ -66,7 +65,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import SkillsWordCloud from "../components/Skills/SkillsWordCloud.vue";
+// import SkillsWordCloud from "../components/Skills/SkillsWordCloud.vue";
 import SkillsCategories from "../components/Skills/SkillsCategories.vue";
 import Education from "../components/Education/EducationGeneral.vue";
 import EducationHighSchool from "../components/Education/EducationHighSchool.vue";
